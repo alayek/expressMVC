@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My App</title>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container container-fluid">
+      <h1><%= title %></h1>
+    
+      <ul>
+        <% for(var i = 0; i < items.length; i++) { %>
+        <li><%= items[i].desc %></li>
+        <% } %>
+      </ul>
+    
+    
+      <form action="/add" method="post" class="form-inline">
+        <div class="form-group">
+          <input type="text" name="newItem" placeholder="Add Something" class="form-control">
+          <input type="submit" class="btn btn-default">
+        </div>
+      </form>
+    </div>
+    <script src="jquery/dist/jquery.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
